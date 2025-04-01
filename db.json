@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "email": "test@example.com",
+      "password": "password123",
+      "name": "Test User"
+    }
+  ],
   "boards": [
     {
       "id": "board-1",
@@ -9,7 +17,8 @@
         "6239be50-4fae-4dfd-b834-693cb8be2af4"
       ],
       "createdAt": "2024-03-14T12:00:00.000Z",
-      "updatedAt": "2024-03-14T12:00:00.000Z"
+      "updatedAt": "2024-03-14T12:00:00.000Z",
+      "userId": 1
     },
     {
       "id": "4829",
@@ -30,12 +39,6 @@
       "order": 1
     },
     {
-      "id": "82fa8604-6711-4209-ac11-e9272a5c8598",
-      "boardId": "4829",
-      "title": "Test board's col",
-      "order": 1
-    },
-    {
       "id": "4d483314-4e8a-42ee-a810-9f3f4862dd21",
       "boardId": "board-1",
       "title": "Done",
@@ -46,6 +49,12 @@
       "boardId": "4829",
       "title": "To do",
       "order": 0
+    },
+    {
+      "id": "686716d8-1a88-4148-816b-093ff1aa0127",
+      "boardId": "4829",
+      "title": "ASDASDASDSA",
+      "order": 1
     }
   ],
   "cards": [
@@ -216,6 +225,14 @@
       "title": "Test done ",
       "description": "asdasd",
       "order": 1
+    },
+    {
+      "id": "c028f1c7-7b4b-4984-b073-221269979521",
+      "boardId": "4829",
+      "columnId": "686716d8-1a88-4148-816b-093ff1aa0127",
+      "title": "asdasdasd",
+      "description": "asdasd\n",
+      "order": 0
     }
   ]
 }
