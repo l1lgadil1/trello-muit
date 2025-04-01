@@ -1,0 +1,74 @@
+{
+  "shared": {
+    "ui": {
+      "components": {
+        "Button": "Reusable button component",
+        "Input": "Form input components",
+        "Modal": "Base modal component",
+        "Card": "Base card component",
+        "Loading": "Loading indicators",
+        "ErrorBoundary": "Error handling component",
+        "ThemeToggle": "Theme switching component"
+      },
+      "layout": {
+        "Container": "Layout container",
+        "Grid": "Grid system components",
+        "Stack": "Flex stack components"
+      }
+    },
+    "lib": {
+      "hooks": {
+        "useDebounce": "Debounce hook",
+        "useLocalStorage": "Local storage hook",
+        "useMediaQuery": "Media query hook",
+        "useTheme": "Theme management hook"
+      },
+      "utils": {
+        "api": "API utilities",
+        "validation": "Form validation utilities",
+        "date": "Date formatting utilities",
+        "storage": "Storage utilities"
+      }
+    },
+    "styles": {
+      "theme": {
+        "colors": "Color palette",
+        "typography": "Typography styles",
+        "spacing": "Spacing system",
+        "breakpoints": "Responsive breakpoints"
+      },
+      "animations": {
+        "transitions": "Common transitions",
+        "keyframes": "Animation keyframes"
+      }
+    },
+    "types": {
+      "common": "Shared type definitions",
+      "api": "API response types",
+      "theme": "Theme type definitions"
+    }
+  },
+  "conventions": {
+    "components": {
+      "props": "Use interface for props",
+      "defaultProps": "Define default props",
+      "propTypes": "Use TypeScript for type checking"
+    },
+    "hooks": {
+      "naming": "use prefix for custom hooks",
+      "types": "Define return type for hooks",
+      "errors": "Handle and throw appropriate errors"
+    },
+    "styles": {
+      "classNames": "Use consistent naming convention",
+      "variables": "Use CSS variables for theming",
+      "responsive": "Mobile-first approach"
+    }
+  },
+  "accessibility": {
+    "aria": "Use appropriate ARIA attributes",
+    "keyboard": "Ensure keyboard navigation",
+    "focus": "Manage focus states",
+    "semantics": "Use semantic HTML elements"
+  }
+} 

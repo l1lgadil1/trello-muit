@@ -1,0 +1,121 @@
+{
+  "backend": {
+    "jsonServer": {
+      "baseUrl": "http://localhost:3001",
+      "endpoints": {
+        "boards": "/boards",
+        "columns": "/columns",
+        "cards": "/cards"
+      },
+      "relationships": {
+        "board": {
+          "hasMany": ["columns"]
+        },
+        "column": {
+          "belongsTo": "board",
+          "hasMany": ["cards"]
+        },
+        "card": {
+          "belongsTo": "column"
+        }
+      }
+    },
+    "apiStructure": {
+      "services": {
+        "location": "src/api/services",
+        "naming": "{entity}-service.ts",
+        "structure": {
+          "imports": ["axios", "types", "constants"],
+          "constants": "API endpoints",
+          "types": "Request/Response types",
+          "service": "API methods"
+        }
+      },
+      "types": {
+        "location": "src/api/types",
+        "files": {
+          "requests": "request.types.ts",
+          "responses": "response.types.ts",
+          "common": "common.types.ts"
+        }
+      }
+    },
+    "patterns": {
+      "requests": {
+        "error": {
+          "handling": "Try-catch with error types",
+          "types": ["NetworkError", "ValidationError", "NotFoundError"]
+        },
+        "interceptors": {
+          "request": ["Authentication", "Content-Type"],
+          "response": ["Error handling", "Data transformation"]
+        },
+        "caching": {
+          "strategy": "Cache-first with TTL",
+          "invalidation": "On mutation operations"
+        }
+      },
+      "mutations": {
+        "optimistic": {
+          "enabled": true,
+          "rollback": "Revert on error"
+        },
+        "retry": {
+          "attempts": 3,
+          "backoff": "Exponential"
+        }
+      }
+    },
+    "services": {
+      "board": {
+        "getBoards": "GET /boards",
+        "getBoard": "GET /boards/:id",
+        "createBoard": "POST /boards",
+        "updateBoard": "PUT /boards/:id",
+        "deleteBoard": "DELETE /boards/:id"
+      },
+      "column": {
+        "getColumns": "GET /columns?boardId=:boardId",
+        "createColumn": "POST /columns",
+        "updateColumn": "PUT /columns/:id",
+        "deleteColumn": "DELETE /columns/:id",
+        "reorderColumns": "PATCH /columns/reorder"
+      },
+      "card": {
+        "getCards": "GET /cards?columnId=:columnId",
+        "createCard": "POST /cards",
+        "updateCard": "PUT /cards/:id",
+        "deleteCard": "DELETE /cards/:id",
+        "moveCard": "PATCH /cards/:id/move",
+        "reorderCards": "PATCH /cards/reorder"
+      }
+    },
+    "errorHandling": {
+      "types": {
+        "ApiError": "Base error class",
+        "NetworkError": "Connection issues",
+        "ValidationError": "Invalid data",
+        "NotFoundError": "Resource not found",
+        "AuthError": "Authentication issues"
+      },
+      "responses": {
+        "400": "Bad Request - ValidationError",
+        "401": "Unauthorized - AuthError",
+        "404": "Not Found - NotFoundError",
+        "500": "Server Error - ApiError"
+      }
+    },
+    "dataTransformations": {
+      "requests": {
+        "snake_case": "Convert camelCase to snake_case",
+        "dates": "ISO string format",
+        "nulls": "Remove undefined values"
+      },
+      "responses": {
+        "camelCase": "Convert snake_case to camelCase",
+        "dates": "Parse ISO strings to Date objects",
+        "defaults": "Set default values for nulls"
+      }
+    }
+  }
+} 
