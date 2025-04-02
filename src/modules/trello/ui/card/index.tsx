@@ -33,7 +33,7 @@ export const Card = ({ handleCardDragStart, handleCardDragOver, handleCardDrop, 
             <DragHandle />
           </div>
           <div>
-            <h3 className="font-medium">{title}</h3>
+            <h3 className="font-medium dark:text-black">{title}</h3>
             <p className="text-sm text-gray-600">{description}</p>
           </div>
         </div>

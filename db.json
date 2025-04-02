@@ -55,6 +55,12 @@
       "boardId": "4829",
       "title": "ASDASDASDSA",
       "order": 1
+    },
+    {
+      "id": "8cf52ac3-162a-4768-ae27-9e808232fe9b",
+      "boardId": "board-1",
+      "title": "asdasdasd",
+      "order": 3
     }
   ],
   "cards": [
@@ -72,7 +78,7 @@
       "title": "Fix Navigation Bug",
       "description": "Menu items not highlighting correctly in mobile view",
       "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
-      "order": 5
+      "order": 7
     },
     {
       "id": "card-3",
@@ -80,7 +86,7 @@
       "title": "Update Dependencies",
       "description": "Update all npm packages to latest versions and fix security issues",
       "columnId": "col2",
-      "order": 9
+      "order": 10
     },
     {
       "id": "card-4",
@@ -119,16 +125,16 @@
       "boardId": "board-1",
       "title": "Setup CI/CD Pipeline1",
       "description": "Configure automated testing and deployment workflow",
-      "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
-      "order": 6
+      "columnId": "col2",
+      "order": 9
     },
     {
       "id": "card-12",
       "boardId": "board-1",
       "title": "Email Integration",
       "description": "Setup email notifications for important events",
-      "columnId": "col2",
-      "order": 8
+      "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
+      "order": 5
     },
     {
       "id": "card-13",
@@ -136,7 +142,7 @@
       "title": "Database Optimization",
       "description": "Add indexes and optimize common queries",
       "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
-      "order": 12
+      "order": 14
     },
     {
       "id": "card-14",
@@ -152,7 +158,7 @@
       "title": "Mobile Responsiveness",
       "description": "Ensure all pages work well on mobile devices",
       "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
-      "order": 7
+      "order": 9
     },
     {
       "id": "card-16",
@@ -160,7 +166,7 @@
       "title": "Security Audit",
       "description": "Perform security audit and fix vulnerabilities",
       "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
-      "order": 9
+      "order": 11
     },
     {
       "id": "card-17",
@@ -168,15 +174,15 @@
       "title": "Backup System",
       "description": "Implement automated backup and recovery system",
       "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
-      "order": 13
+      "order": 15
     },
     {
       "id": "card-18",
       "boardId": "board-1",
       "title": "User Onboarding",
       "description": "Create interactive user onboarding flow",
-      "columnId": "col2",
-      "order": 7
+      "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
+      "order": 6
     },
     {
       "id": "card-19",
@@ -233,6 +239,20 @@
       "title": "asdasdasd",
       "description": "asdasd\n",
       "order": 0
+    }
+  ],
+  "cardAssignments": [
+    {
+      "id": "assignment-1",
+      "cardId": "card-1",
+      "userId": "1",
+      "assignedAt": "2024-03-14T12:00:00.000Z"
+    },
+    {
+      "id": "assignment-2",
+      "cardId": "card-2",
+      "userId": "1",
+      "assignedAt": "2024-03-14T12:00:00.000Z"
     }
   ]
 }

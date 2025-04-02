@@ -47,7 +47,9 @@ export default function BoardsPage() {
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">My Boards</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+          My Boards
+        </h1>
         <button
           onClick={() => setIsCreating(true)}
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -57,7 +59,10 @@ export default function BoardsPage() {
       </div>
 
       {error && (
-        <div className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+        <div
+          className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+          role="alert"
+        >
           {error}
         </div>
       )}
@@ -65,7 +70,9 @@ export default function BoardsPage() {
       {isCreating && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl">
-            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Create New Board</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+              Create New Board
+            </h2>
             <input
               type="text"
               value={newBoardTitle}
@@ -98,9 +105,11 @@ export default function BoardsPage() {
             to={`/board/${board.id}`}
             className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
           >
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{board.title}</h2>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              {board.title}
+            </h2>
             <p className="text-gray-600 dark:text-gray-300">
-              {board.columns?.length || 0} columns
+              {/* {board.columns?.length || 0} columns */}
             </p>
           </Link>
         ))}
