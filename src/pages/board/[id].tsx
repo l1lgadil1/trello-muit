@@ -40,6 +40,8 @@ export default function BoardPage() {
   const {
     searchQuery,
     setSearchQuery,
+    setColumnSearchQuery,
+    getColumnSearchQuery,
     columns,
     draggedCard,
     dragOverColumnId,
@@ -191,8 +193,9 @@ export default function BoardPage() {
                   }
                   search={
                     <ColumnListSearch
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
+                      columnId={column.id}
+                      value={getColumnSearchQuery(column.id)}
+                      onChange={setColumnSearchQuery}
                     />
                   }
                   list={
@@ -214,7 +217,13 @@ export default function BoardPage() {
               {showUnassigned && (
                 <Column
                   header={<ColumnHeader title="Unassigned Cards" />}
-                  search={<ColumnListSearch value="" onChange={() => {}} />}
+                  search={
+                    <ColumnListSearch
+                      columnId="unassigned"
+                      value={getColumnSearchQuery("unassigned")}
+                      onChange={setColumnSearchQuery}
+                    />
+                  }
                   list={<CardList list={renderUnassignedCards()} />}
                 />
               )}

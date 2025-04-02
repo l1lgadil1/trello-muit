@@ -10,7 +10,7 @@ export function SearchBar({ value, onChange }: SearchBarProps) {
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder="Search cards..."
-      className="w-64 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+      className="w-64 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-black"
     />
   );
 } 

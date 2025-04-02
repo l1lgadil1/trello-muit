@@ -1,16 +1,17 @@
 interface IProps {    
+  columnId: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (columnId: string, value: string) => void;
 }
 
-export const ColumnListSearch = ({ value, onChange }: IProps) => {
+export const ColumnListSearch = ({ columnId, value, onChange }: IProps) => {
   return (
     <div className="mb-4">
       <input
         type="text"
         placeholder="Search in column..."
         value={value}
-        onChange={onChange}
+        onChange={(e) => onChange(columnId, e.target.value)}
         className="w-full px-3 py-2 text-sm 
           bg-background text-foreground 
           placeholder:text-muted-foreground/60

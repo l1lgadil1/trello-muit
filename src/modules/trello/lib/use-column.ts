@@ -157,6 +157,17 @@ export const useColumn = (boardId: string | undefined) => {
     return [...items].sort((a, b) => a.order - b.order);
   };
 
+  const setColumnSearchQuery = (columnId: string, query: string) => {
+    setColumnSearchQueries(prev => ({
+      ...prev,
+      [columnId]: query
+    }));
+  };
+
+  const getColumnSearchQuery = (columnId: string) => {
+    return columnSearchQueries[columnId] || "";
+  };
+
   const filteredCards = cards.filter(
     (card) =>
       card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -354,6 +365,9 @@ export const useColumn = (boardId: string | undefined) => {
   return {
     searchQuery,
     setSearchQuery,
+    columnSearchQueries,
+    setColumnSearchQuery,
+    getColumnSearchQuery,
     columns,
     cards,
     draggedColumn,
@@ -377,8 +391,6 @@ export const useColumn = (boardId: string | undefined) => {
     updateCard,
     deleteCard,
     sortByOrder,
-    columnSearchQueries,
-    setColumnSearchQueries,
     error
   };
 };
