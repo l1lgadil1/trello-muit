@@ -5,6 +5,12 @@
       "email": "test@example.com",
       "password": "password123",
       "name": "Test User"
+    },
+    {
+      "id": "f017",
+      "email": "iagadilov1@gmail.com",
+      "password": "Ilyas2004",
+      "name": "Ilyas A"
     }
   ],
   "boards": [
@@ -23,6 +29,13 @@
     {
       "id": "4829",
       "title": "Test Board"
+    },
+    {
+      "id": "ccb7fa49-3f13-4352-9faa-58e0fd659616",
+      "title": "ЧЧЧЧ",
+      "columns": [],
+      "createdAt": "2025-04-02T04:03:27.892Z",
+      "updatedAt": "2025-04-02T04:03:27.892Z"
     }
   ],
   "columns": [
@@ -61,6 +74,24 @@
       "boardId": "board-1",
       "title": "asdasdasd",
       "order": 3
+    },
+    {
+      "id": "af2db95b-72cd-40f3-8c68-f1fbe03cf66c",
+      "boardId": "ccb7fa49-3f13-4352-9faa-58e0fd659616",
+      "title": "Тефвыыфв",
+      "order": 0
+    },
+    {
+      "id": "e27b6319-db9d-4233-aefe-3c354e00c8d6",
+      "boardId": "ccb7fa49-3f13-4352-9faa-58e0fd659616",
+      "title": "йцу123123213",
+      "order": 1
+    },
+    {
+      "id": "37687993-dc59-4d17-8a2a-80bfb49af4f7",
+      "boardId": "ccb7fa49-3f13-4352-9faa-58e0fd659616",
+      "title": "asdasd",
+      "order": 2
     }
   ],
   "cards": [
@@ -181,8 +212,8 @@
       "boardId": "board-1",
       "title": "User Onboarding",
       "description": "Create interactive user onboarding flow",
-      "columnId": "a3753891-fc07-4c79-960e-9ef86fb6fe22",
-      "order": 6
+      "columnId": "4d483314-4e8a-42ee-a810-9f3f4862dd21",
+      "order": 1
     },
     {
       "id": "card-19",
@@ -230,7 +261,7 @@
       "columnId": "4d483314-4e8a-42ee-a810-9f3f4862dd21",
       "title": "Test done ",
       "description": "asdasd",
-      "order": 1
+      "order": 2
     },
     {
       "id": "c028f1c7-7b4b-4984-b073-221269979521",
